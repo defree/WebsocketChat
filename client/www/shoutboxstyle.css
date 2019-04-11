@@ -1,0 +1,85 @@
+/* 
+TurWa main colors:
+  background: #325b84; //blue
+  color1: #ee6b60; //orange(headers, logo texts)
+  color2: #5bbfbf; //cyan(buttons, links etc)
+  color3; #ffffff; //white(basic text)
+*/
+#sbMainWrapper {
+  width: 20rem;
+  border: 2px solid #ee6b60;
+  background-color: #325b84;
+}
+
+.sbMessageArea {
+  height: 30rem;
+  overflow: auto;
+}
+
+.sbInputArea {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.21);
+  height: 3rem;
+}
+
+.sbTextFieldArea {
+  width: 75%;
+  float: left;
+}
+
+.sbTextFieldInnerArea {
+  width: 90%;
+  height: 80%;
+  margin: auto auto;
+  padding: 0.2rem;
+}
+
+.sbNameInput {
+  width: 100%;
+  background-color: inherit;
+  color: #ffffff;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+}
+
+.sbTextInput {
+  width: 100%;
+  background-color: inherit;
+  color: #ffffff;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+}
+
+.sbButtonArea {
+  width: 25%;
+  float: left;
+}
+
+.sbButtonInnerArea {
+  width: 80%;
+  height: 80%;
+  margin: auto auto;
+  padding: 0.3rem;
+}
+
+.sbSubmitButton {
+  width: 100%;
+  height: 100%;
+  color: #ee6b60;
+  background-color: inherit;
+  border: 2px solid #ee6b60;
+  border-radius: 10px;
+}
+
+::placeholder {
+  color: #cccccc;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #cccccc;
+ }
+ 
+ ::-ms-input-placeholder { /* Microsoft Edge */
+  color: #cccccc;
+ }
