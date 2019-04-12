@@ -1,8 +1,9 @@
 import React from 'react'
 
 const SingleMessage = ({ name, message }) =>
-  <p>
-    <strong>{name}</strong> <em>{message}</em>
-  </p>;
+  <div className="sbSingleMessageBox">
+    <div className="sbNameText">{name}:&nbsp;</div>
+    <div className="sbMessageText">{message}</div>
+  </div>;
 
 export default SingleMessage;

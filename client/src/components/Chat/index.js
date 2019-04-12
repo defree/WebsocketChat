@@ -45,12 +45,6 @@ class Chat extends Component {
   render() {
     return (
       <div id="sbMainWrapper">
-        <div className="sbInputArea">
-          <MessageSend
-            ws={this.ws}
-            onSubmitMessage={(name, messageString) => this.submitMessage(name, messageString)}
-          />
-        </div>
         <div className="sbMessageArea">
           {this.state.messages.map((message, index) =>
             <SingleMessage
@@ -59,6 +53,12 @@ class Chat extends Component {
               name={message.name}
             />,
           )}
+        </div>
+        <div className="sbInputArea">
+          <MessageSend
+            ws={this.ws}
+            onSubmitMessage={(name, messageString) => this.submitMessage(name, messageString)}
+          />
         </div>
       </div>
     )
