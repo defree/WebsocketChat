@@ -96,6 +96,10 @@ TurWa main colors:
   border-radius: 10px;
 }
 
+.sbSubmitButton:disabled {
+  opacity: 0.5;
+}
+
 ::placeholder {
   font-size: 10px;
   color: #cccccc;

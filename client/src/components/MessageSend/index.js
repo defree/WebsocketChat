@@ -11,6 +11,8 @@ class MessageSend extends Component {
     onSubmitMessage: PropTypes.func.isRequired,
   }
 
+  isButtonDisabled = (name, message) => name === '' || message === '';
+
   render() {
     return (
       <form
@@ -43,7 +45,14 @@ class MessageSend extends Component {
         </div>
         <div className="sbButtonArea">
           <div className="sbButtonInnerArea">
-            <button type="submit" value="Send" className="sbSubmitButton">Lähetä</button>
+            <button
+              type="submit"
+              value="Send"
+              className="sbSubmitButton"
+              disabled={this.isButtonDisabled(this.state.name, this.state.message)}
+            >
+              Lähetä
+            </button>
           </div>
         </div>
       </form>
