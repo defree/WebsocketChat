@@ -5,13 +5,21 @@ class MessageSend extends Component {
   state = {
     name: '',
     message: '',
+    timeout: false,
   };
 
   static propTypes = {
     onSubmitMessage: PropTypes.func.isRequired,
   }
 
-  isButtonDisabled = (name, message) => name === '' || message === '';
+  componentDidUpdate() {
+    if (this.state.timeout) {
+      // Set 5 second timeout between messages
+      setTimeout(() => this.setState({ timeout: false }), 5000);
+    } 
+  }
+
+  isButtonDisabled = (name, message) => name === '' || message === '' || this.state.timeout;
 
   render() {
     return (
@@ -20,7 +28,7 @@ class MessageSend extends Component {
         onSubmit={e => {
           e.preventDefault()
           this.props.onSubmitMessage(this.state.name, this.state.message)
-          this.setState({ message: '' })
+          this.setState({ message: '', timeout: true })
         }}
         style={{ margin: 0 }}
       >
