@@ -1,3 +1,5 @@
+# Moved to https://github.com/TurunWappuradio/website
+
 Simple chat based on websockets and React
 
 Examples used from:
